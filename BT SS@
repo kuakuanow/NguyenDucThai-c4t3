@@ -1,0 +1,57 @@
+# 1.What is Boolean? Write down 3 different expression that results a Boolean type
+#         boolean là kiểu giá trị đúng hoặc sai
+#         VD:n=5
+#         b=8
+#         print(bool(n==b))
+#
+#         n=5
+#         b=8
+#         print(bool(n==b-3))
+#
+# 2.What is a flow chart? Draw flow chart for the following code snippet: (you can draw on a paper, take a picture of it)
+#         flow chart là biểu đồ thể hiện đường chạy lệnh của code.
+#
+#
+# TURTLE EX:
+# 1.
+# from turtle import *
+# import turtle
+# turtle.pencolor("yellow")
+# for i in range(2):
+#     right(30)
+#     forward(50)
+#     left(60)
+#     forward(50)
+#     left(120)
+#     forward(50)
+#     left(60)
+#     forward(100)
+#     right(60)
+#     forward(50)
+#     right(120)
+#     forward(50)
+#     right(60)
+#     forward(50)
+#     left(120)
+# mainloop()
+# 2.
+# from turtle import *
+# import turtle
+# turtle.pencolor("blue")
+# for i in range(3):
+#     forward(100)
+#     left(120)
+# turtle.pencolor("red")
+# for i in range(4):
+#     forward(100)
+#     left(90)
+# turtle.pencolor("blue")
+# for i in range(5):
+#      forward(100)
+#      left(72)
+# turtle.pencolor("red")
+# for i in range(6):
+#      forward(100)
+#      left(60)
+# mainloop()
+#

@@ -1,0 +1,38 @@
+question_pack = [
+    {
+        "question":"co nhan ra giang vien khong",
+        "choice": {"A.co","B.khong","C.anh la ai","D. giang vien da den dau"},
+        "right_choice": "D",
+        "wrong": "A",
+        "reply" : "The right choice is D!"
+    },
+    {
+        "question":"co di muon khong",
+        "choice": ["A.co", "B.khong"],
+        "right_choice": "A",
+        "wrong": "B",
+        "reply": "The right choice is A"
+    },
+    {
+        "question" : "Co lam bai tap ve nha chua?",
+        "choice" : ["A.Roi", "B.Chua"],
+        "right_choice" : "A",
+        "wrong": "B",
+        "reply" :"The right choice is A"
+    },
+]
+count = 0
+for q in question_pack:
+    # q = question_pack[0]
+    print(q["question"])
+
+    choices = q["choice"]
+    print(*q["choice"], sep="\n")
+
+    user_choice = input("Your answer? ").upper()
+    if user_choice == q["right_choice"]:
+        print("Bingo")
+        count += 1
+    else:print(q["reply"])
+
+print ("Your Mark: ",round(((count/3)*100), 2))

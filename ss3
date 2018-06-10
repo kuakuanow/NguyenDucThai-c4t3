@@ -1,0 +1,14 @@
+x = input("Enter a sentence")
+x = x.lower()
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+letter_count = {}
+for char in x:
+    if char in alphabet:
+        if char in letter_count:
+            letter_count[char] = letter_count[char] + 1
+        else:
+            letter_count[char] = 1
+
+key = letter_count.keys()
+for char in sorted(key):
+    print(char, letter_count[char])

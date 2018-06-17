@@ -1,0 +1,13 @@
+import math
+def ex2():
+    a = [0]
+    b = 0
+    for i in range(100):
+        a[i] = math.pow(2, b)
+        if a[i] >= 1025:
+            a.pop()
+            break
+        else:
+            a = a + [0]
+            b += 1
+    print(a)

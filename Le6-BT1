@@ -1,0 +1,10 @@
+def ex1 ():
+    x = int(input("n = "))
+    a = [0] * x
+    for i in range(x):
+        a[0] = 2
+        if i % 2 == 1:
+            a[i] = -1
+        else:
+            a[i] = a[i - 2] - 0.5
+    print("Array is: ", a)

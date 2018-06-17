@@ -1,0 +1,22 @@
+import math
+
+def enterArray():
+    n = int(input("Enter length of array: "))
+    a = [0] * n
+    print("Please enter the array: ")
+    for i in range(n):
+        a[i] = int(input())
+    print("Your array is: ", a)
+    return a
+
+def tongZ():
+    x = enterArray()
+    n = len(x)
+    y = [0] * n
+    z = [0] * n
+    s = 0
+    for i in range(n):
+        y[i] = (math.pi / 2) - x[i]
+        z[i] = math.cos(x[i]) - math.sin(x[i])
+        s = s + z[i]
+    print("Total of array z is: ", s)

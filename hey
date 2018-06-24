@@ -1,12 +1,12 @@
 
 class Bullet:
-    def __init__(self,x,y,w,h,speed):
-        self.x = x
-        self.y = y
+    def __init__(self,w,h,x,y,speed,ship):
         self.w = w
         self.h = h
+        self.x = x
+        self.y = y
         self.speed = speed
-        self.dir_x = ship.x
+        self.dir_x = self.ship.x
         self.dir_y = 1
     def draw(self):
         pygame.draw.rect(display_surf,WHITE,(self.x,self.y,self.w,self.h))

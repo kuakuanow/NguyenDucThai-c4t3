@@ -1,0 +1,47 @@
+import cv2
+import numpy as np
+
+I = cv2.imread("C:\\les7\\image\\36458638_1852833921442390_1956364990671749120_n.jpg")
+I = cv2.resize(I,(320,240))
+cv2.namedWindow("image",cv2.WINDOW_NORMAL)
+cv2.imshow("image",I)
+print("row:",I.shape[0])
+print("cols:",I.shape[1])
+print("channel:",I.shape[2])
+gray = cv2.cvtColor(I,cv2.COLOR_RGB2GRAY)
+# cv2.imshow("gray", gray)
+cv2.waitKey()
+
+#get number of rows
+rows = gray.shape[0]
+cols = gray.shape[1]
+print("value",gray[0,0])
+
+
+def meanfilter (gray,i,j):
+    temp = 0
+    for k in range(-1,2):
+        for p in range(-1,2):
+            temp = temp + gray[i+k,j+p]
+    return temp/9
+
+for i in range(5):
+    for j in range(10):
+        gray[i,j] = meanfilter(gray,i,j)
+
+def medianfilter (gray,i,j):
+    list = []
+    for k in range(-1,2):
+        for p in range(-1,2):
+            list.append(gray[i+k,j+p])
+    sorted(list)
+    return list[5]
+
+for i in range(5):
+    for j in range(10):
+        gray[i,j] = medianfilter(gray,i,j)
+
+cv2.imshow("grayImg",gray)
+cv2.waitKey()
+
+

@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-I = cv2.imread("C:\\les7\\image\\36458638_1852833921442390_1956364990671749120_n.jpg")
+I = cv2.imread("C:\\les7\\image\\36397378_1852833904775725_6118747732870955008_n.jpg")
 I = cv2.resize(I,(320,240))
 cv2.namedWindow("image",cv2.WINDOW_NORMAL)
 cv2.imshow("image",I)
@@ -18,21 +18,21 @@ cols = gray.shape[1]
 print("value",gray[0,0])
 
 
-def meanfilter (gray,i,j):
-    temp = 0
-    for k in range(-1,2):
-        for p in range(-1,2):
-            temp = temp + gray[i+k,j+p]
-    return temp/9
-
-for i in range(5):
-    for j in range(10):
-        gray[i,j] = meanfilter(gray,i,j)
+# def meanfilter (gray,i,j):
+#     temp = 0
+#     for k in range(-1,2):
+#         for p in range(-1,2):
+#             temp = temp + gray[i+k,j+p]
+#     return temp/9
+#
+# for i in range(1, rows - 1):
+#     for j in range(1, cols - 1):
+#         gray[i,j] = meanfilter(gray,i,j)
 
 def medianfilter (gray,i,j):
     list = []
-    for k in range(-1,2):
-        for p in range(-1,2):
+    for k in range(-2,3):
+        for p in range(-2,3):
             list.append(gray[i+k,j+p])
     sorted(list)
     return list[5]
